@@ -1,0 +1,23 @@
+---
+import Project from './Project.astro';
+import H2 from './H2.astro';
+
+import img1 from '../assets/images/project-1.jpg';
+import img2 from '../assets/images/project-2.jpg';
+import img3 from '../assets/images/project-3.jpg';
+---
+<main class="main" id="projects" >
+    <H2 title='Projects' />
+    <Project img={img1} />
+    <Project img={img2} reverse={true} />
+    <Project img={img3} />
+</main>
+
+<style>
+    .main {
+        max-width: 99.2rem;
+        margin: 0 auto;
+        margin-top: 8.8rem;
+        margin-bottom: 14.4rem;
+    }
+</style>

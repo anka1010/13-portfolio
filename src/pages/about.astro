@@ -1,0 +1,77 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Footer from "../components/Footer.astro";
+---
+<Layout>
+    <div class="about">
+        <div class="about-text">
+            <h1>About me</h1>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe ut sequi molestiae accusamus tempore, quam placeat est laboriosam ea, illum mollitia, minus laudantium architecto eveniet.</p>
+            <a href="https://github.com/stars/anka1010/lists/projects" class="btn btn-primary">GitHub</a>
+        </div>
+        <div class="about-image"></div>
+    </div>
+    <Footer />
+</Layout>
+
+<style>
+    .about {
+        max-width: 120rem;
+        margin: 0 auto;
+        margin-bottom: 14.4rem;
+        display: flex;
+        gap: 10.2rem;
+        align-items: start;
+        justify-content: space-between;
+        
+        .about-text {
+            max-width: 48.6rem;
+            margin-top: 10.6rem;
+
+            h1 {
+                font-family: 'Playfair Display', serif;
+                font-size: 6.4rem;
+                font-weight: 700;
+                line-height: 120%;
+                color: var(--color-secondary-high);
+                margin-bottom: 3.2rem;
+            }
+
+            p {
+                font-family: 'Nunito', sans-serif;
+                font-size: 2.4rem;
+                font-weight: 400;
+                line-height: 150%;
+                color: var(--color-secondary-medium);
+                margin-bottom: 3.2rem;
+            }
+
+        }
+
+        .about-image {
+            width: 72rem;
+            height: 62.9rem;
+            position: relative;
+            overflow: hidden;
+            margin-right: -10.8rem;
+
+            .shape {
+                width: 97.7rem;
+                height: 87.7rem;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                z-index: 5;
+            }
+
+            .vector {
+                width: 68.4rem;
+                height: 55.5rem;
+                position: absolute;
+                top: 0.9rem;
+                left: 1.3rem;
+                z-index: 10;
+            }
+        }
+    }
+</style>

@@ -1,0 +1,73 @@
+---
+import { Image } from "astro:assets";
+
+const {img, reverse = false} = Astro.props;
+---
+<div class={`project ${reverse && 'reverse'}`}>
+
+    <div class="text">
+        <h3>Project Name</h3>
+        <p>Project description text</p>
+        <a href="#!">View on GitHub</a>
+    </div>
+    <div class="image">
+        <Image src={img} alt="" />
+    </div>
+</div>
+
+<style>
+    .project {
+        max-width: 99.2rem;
+        max-height: 52.4rem;
+        overflow: hidden;
+        border-radius: 2.4rem;
+        margin-top: 8rem;
+        background-color: var(--color-white);
+        
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        .text {
+            padding-top: 14.6rem;
+            padding-left: 5rem;
+
+            h3 {
+                font-family: "Plaifair Display", serif;
+                font-size: 4rem;
+                font-weight: 700;
+                line-height: 150%;
+                margin-bottom: 2.4rem;
+            }
+
+            p {
+                font-family: 'Nunito', sans-serif;
+                font-size: 1.8rem;
+                font-weight: 400;
+                line-height: 150%;
+                color: var(--color-secondary-medium);
+                margin-bottom: 2.4rem;
+            }
+
+            a {
+                font-family: 'Roboto', sans-serif;
+                font-size: 1.8rem;
+                font-weight: 500;
+                line-height: 150%;
+                color: var(--color-secondary-high);
+                padding: 0.8rem 2.4rem;
+                border: 1px solid;
+                border-radius: 2.4rem;
+            }
+        }
+
+        .image {
+         
+        }
+    }
+
+    .reverse {
+        .text {
+            order: 1;
+        }
+    }
+</style>

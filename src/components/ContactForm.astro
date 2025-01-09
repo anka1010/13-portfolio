@@ -1,0 +1,67 @@
+---
+import H2 from "./H2.astro"
+---
+<div class="contact" id="contact">
+    <H2 title="Contact me" />
+    <form class="form">
+        <div class="form-field">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name">
+        </div>
+        <div class="form-field">
+            <label for="email">Email</label>
+            <input type="text" id="email" name="email">
+        </div>
+        <div class="form-field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message"></textarea>
+        </div>
+        <button class="btn btn-primary form-button">Send</button>
+    </form>
+</div>
+
+<style>
+    .contact {
+        max-width: 40rem;
+        margin: 0 auto;
+
+        .form {
+            display: flex;
+            flex-direction: column;
+            margin-top: 8.05rem;
+            gap: 2.4rem;
+
+            .form-field {
+                display: flex;
+                flex-direction: column;
+                gap: 0.8rem;
+            }
+
+            label {
+                font-family: 'Nunito', sans-serif;
+                font-size: 1.6rem;
+                font-weight: 600;
+
+            }
+
+            input, textarea {
+                background-color: var(--color-white);
+                border-radius: 0.8rem;
+            }
+
+            input {
+                height: 4rem;
+            }
+
+            textarea {
+                height: 16rem;
+            }
+
+            .form-button {
+                display: inline;
+                width: fit-content;
+                align-self: flex-end;
+            }
+        }
+    }
+</style>

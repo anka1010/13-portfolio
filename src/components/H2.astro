@@ -1,0 +1,28 @@
+---
+const {title} = Astro.props;
+---
+<h2>{title}<span></span></h2>
+    
+<style>
+        h2 {
+            font-family: "Playfair Display";
+            font-size: 4.8rem;
+            font-weight: 700;
+            line-height: 150%;
+            color: var(--color-secondary-high);
+            text-transform: capitalize;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        span {
+            width: 10rem;
+            height: 4px;
+            border-radius: 4px;
+            background-color: var(--color-primary);
+            margin-top: 4px;
+        }
+
+</style>
